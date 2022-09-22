@@ -14,6 +14,16 @@
 		1E9154C128DC553700CE9FCE /* GalleryListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154C028DC553700CE9FCE /* GalleryListEntity.swift */; };
 		1E9154C328DC554400CE9FCE /* GalleryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154C228DC554400CE9FCE /* GalleryListViewModel.swift */; };
 		1E9154C628DC5A1D00CE9FCE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1E9154C528DC5A1D00CE9FCE /* Kingfisher */; };
+		1E9154C828DC696D00CE9FCE /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154C728DC696D00CE9FCE /* ToDoListViewController.swift */; };
+		1E9154CA28DC6D9A00CE9FCE /* DetailsToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154C928DC6D9A00CE9FCE /* DetailsToDoViewController.swift */; };
+		1E9154CC28DC6DAA00CE9FCE /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154CB28DC6DAA00CE9FCE /* AddToDoViewController.swift */; };
+		1E9154CF28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154CD28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift */; };
+		1E9154D028DC6FEB00CE9FCE /* ToDoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9154CE28DC6FEB00CE9FCE /* ToDoListTableViewCell.xib */; };
+		1E9154D228DC78C600CE9FCE /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154D128DC78C600CE9FCE /* ToDoListViewModel.swift */; };
+		1E9154D428DC78DD00CE9FCE /* AddToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154D328DC78DD00CE9FCE /* AddToDoViewModel.swift */; };
+		1E9154D628DC78F300CE9FCE /* DetailsToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154D528DC78F300CE9FCE /* DetailsToDoViewModel.swift */; };
+		1E9154E028DC821A00CE9FCE /* UserInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154DE28DC821A00CE9FCE /* UserInfo.xcdatamodeld */; };
+		1E9154E228DC829D00CE9FCE /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154E128DC829D00CE9FCE /* CoreDataStack.swift */; };
 		1EB08F8A28DBC31500542971 /* LetterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB08F8928DBC31500542971 /* LetterListModel.swift */; };
 		1EB08F8C28DBC32700542971 /* LetterListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB08F8B28DBC32700542971 /* LetterListEntity.swift */; };
 		1EB4993728DB941100975C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB4993628DB941100975C2D /* AppDelegate.swift */; };
@@ -34,6 +44,16 @@
 		1E9154BE28DC552900CE9FCE /* GalleryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListModel.swift; sourceTree = "<group>"; };
 		1E9154C028DC553700CE9FCE /* GalleryListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListEntity.swift; sourceTree = "<group>"; };
 		1E9154C228DC554400CE9FCE /* GalleryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListViewModel.swift; sourceTree = "<group>"; };
+		1E9154C728DC696D00CE9FCE /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		1E9154C928DC6D9A00CE9FCE /* DetailsToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsToDoViewController.swift; sourceTree = "<group>"; };
+		1E9154CB28DC6DAA00CE9FCE /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		1E9154CD28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewCell.swift; sourceTree = "<group>"; };
+		1E9154CE28DC6FEB00CE9FCE /* ToDoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoListTableViewCell.xib; sourceTree = "<group>"; };
+		1E9154D128DC78C600CE9FCE /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
+		1E9154D328DC78DD00CE9FCE /* AddToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewModel.swift; sourceTree = "<group>"; };
+		1E9154D528DC78F300CE9FCE /* DetailsToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsToDoViewModel.swift; sourceTree = "<group>"; };
+		1E9154DF28DC821A00CE9FCE /* UserInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfo.xcdatamodel; sourceTree = "<group>"; };
+		1E9154E128DC829D00CE9FCE /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1EB08F8928DBC31500542971 /* LetterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListModel.swift; sourceTree = "<group>"; };
 		1EB08F8B28DBC32700542971 /* LetterListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListEntity.swift; sourceTree = "<group>"; };
 		1EB4993328DB941100975C2D /* TabBar3HomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar3HomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E9154E328DC8C9100CE9FCE /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E9154DE28DC821A00CE9FCE /* UserInfo.xcdatamodeld */,
+				1E9154E128DC829D00CE9FCE /* CoreDataStack.swift */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
 		1EB4992A28DB941100975C2D = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +145,7 @@
 		1EB4994C28DB943600975C2D /* ToDoListModule */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154E328DC8C9100CE9FCE /* CoreDataModel */,
 				1EB4995828DB9F9800975C2D /* DetailsToDoModule */,
 				1EB4995728DB9F8200975C2D /* AddToDoModule */,
 				1EB4995628DB9F7700975C2D /* ToDoModule */,
@@ -210,6 +240,9 @@
 		1EB4995928DB9FA700975C2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154C728DC696D00CE9FCE /* ToDoListViewController.swift */,
+				1E9154CD28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift */,
+				1E9154CE28DC6FEB00CE9FCE /* ToDoListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +250,7 @@
 		1EB4995B28DB9FB700975C2D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154D128DC78C600CE9FCE /* ToDoListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,6 +265,7 @@
 		1EB4995D28DB9FFC00975C2D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154D328DC78DD00CE9FCE /* AddToDoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +273,7 @@
 		1EB4995E28DBA00300975C2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154CB28DC6DAA00CE9FCE /* AddToDoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +288,7 @@
 		1EB4996028DBA00A00975C2D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154D528DC78F300CE9FCE /* DetailsToDoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -259,6 +296,7 @@
 		1EB4996128DBA00E00975C2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1E9154C928DC6D9A00CE9FCE /* DetailsToDoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +377,7 @@
 				1EB4994028DB941200975C2D /* Assets.xcassets in Resources */,
 				1EB4993E28DB941100975C2D /* Main.storyboard in Resources */,
 				1EB4996628DBBEC100975C2D /* LetterListTableViewCell.xib in Resources */,
+				1E9154D028DC6FEB00CE9FCE /* ToDoListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,18 +388,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9154E228DC829D00CE9FCE /* CoreDataStack.swift in Sources */,
 				1E9154C128DC553700CE9FCE /* GalleryListEntity.swift in Sources */,
+				1E9154D628DC78F300CE9FCE /* DetailsToDoViewModel.swift in Sources */,
 				1EB4993B28DB941100975C2D /* LetterListViewController.swift in Sources */,
 				1EB4993728DB941100975C2D /* AppDelegate.swift in Sources */,
 				1EB4996828DBC1D300975C2D /* LetterListViewModel.swift in Sources */,
+				1E9154D428DC78DD00CE9FCE /* AddToDoViewModel.swift in Sources */,
 				1EB4993928DB941100975C2D /* SceneDelegate.swift in Sources */,
+				1E9154CA28DC6D9A00CE9FCE /* DetailsToDoViewController.swift in Sources */,
 				1E9154C328DC554400CE9FCE /* GalleryListViewModel.swift in Sources */,
+				1E9154CC28DC6DAA00CE9FCE /* AddToDoViewController.swift in Sources */,
 				1EB4996528DBBEC100975C2D /* LetterListTableViewCell.swift in Sources */,
 				1E9154BC28DC550D00CE9FCE /* GalleryListCollectionViewCell.swift in Sources */,
 				1E9154B928DC54EF00CE9FCE /* GalleryListViewController.swift in Sources */,
+				1E9154CF28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift in Sources */,
 				1EB08F8A28DBC31500542971 /* LetterListModel.swift in Sources */,
+				1E9154D228DC78C600CE9FCE /* ToDoListViewModel.swift in Sources */,
+				1E9154E028DC821A00CE9FCE /* UserInfo.xcdatamodeld in Sources */,
 				1E9154BF28DC552900CE9FCE /* GalleryListModel.swift in Sources */,
 				1EB08F8C28DBC32700542971 /* LetterListEntity.swift in Sources */,
+				1E9154C828DC696D00CE9FCE /* ToDoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +647,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		1E9154DE28DC821A00CE9FCE /* UserInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E9154DF28DC821A00CE9FCE /* UserInfo.xcdatamodel */,
+			);
+			currentVersion = 1E9154DF28DC821A00CE9FCE /* UserInfo.xcdatamodel */;
+			path = UserInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1EB4992B28DB941100975C2D /* Project object */;
 }
