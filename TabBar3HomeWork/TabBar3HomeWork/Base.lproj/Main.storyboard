@@ -11,14 +11,36 @@
         <!--Photos-->
         <scene sceneID="6w6-8X-UP2">
             <objects>
-                <viewController id="hYM-WP-bEl" sceneMemberID="viewController">
+                <viewController id="hYM-WP-bEl" customClass="GalleryListViewController" customModule="TabBar3HomeWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugk-c1-8iS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GKM-IG-vh2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.83529411760000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0F4-QW-d67">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s0B-e1-bBx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s0B-e1-bBx" firstAttribute="trailing" secondItem="GKM-IG-vh2" secondAttribute="trailing" id="7jy-co-yH5"/>
+                            <constraint firstItem="GKM-IG-vh2" firstAttribute="top" secondItem="s0B-e1-bBx" secondAttribute="top" id="IWj-9H-zU0"/>
+                            <constraint firstItem="GKM-IG-vh2" firstAttribute="leading" secondItem="s0B-e1-bBx" secondAttribute="leading" id="deI-lY-ZGO"/>
+                            <constraint firstItem="s0B-e1-bBx" firstAttribute="bottom" secondItem="GKM-IG-vh2" secondAttribute="bottom" id="wee-Bx-vBx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="ckq-nt-UdO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GKM-IG-vh2" id="8xf-J6-H9L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5M-bb-kB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
