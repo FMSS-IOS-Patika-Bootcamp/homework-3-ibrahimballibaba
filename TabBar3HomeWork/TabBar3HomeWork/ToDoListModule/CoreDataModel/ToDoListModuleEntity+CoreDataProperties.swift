@@ -17,7 +17,7 @@ extension ToDoListModuleEntity {
     }
 
     @NSManaged public var date: Date?
-    @NSManaged public var id: UUID?
+    @NSManaged public var idTry: UUID?
     @NSManaged public var isCompleted: Bool
     @NSManaged public var title: String?
     @NSManaged public var titleDescription: String?

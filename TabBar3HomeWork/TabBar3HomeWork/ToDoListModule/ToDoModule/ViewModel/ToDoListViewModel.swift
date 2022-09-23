@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ToDoListViewModelProtocol: AnyObject {
     func didCellFetchToDo(_ toDo: [NewListToDoArray])
 }
 
+
 final class ToDoListViewModel {
     weak var toDoListViewModelDelegate: ToDoListViewModelProtocol?
     
+    
+   // var detailsToDoVC = DetailsToDoViewController()
     private var toDoDataModelInstance = ToDoDataModel()
     
     init(){
@@ -24,14 +28,15 @@ final class ToDoListViewModel {
         toDoDataModelInstance.getData()
     }
     
+    func didClickToDo(_ index: Int){
+        let selectedToDo = toDoDataModelInstance.newToDoData[index]
+        print(selectedToDo)
+       // let destinVC = UIStoryboard().instantiateViewController(withIdentifier:"detailsToDoVC") as! DetailsToDoViewController
+       // UINavigationController().pushViewController(destinVC, animated: true)
+        //detailsToDoVC.toDoArray = selectedToDo
+    }
 }
 
-//private extension GalleryListViewModel {
-//    @discardableResult
-//    func makeViewBaseModel(_ toDos: [Photos]) -> [N]{
-//        return photos.map{.init(id: $0.id, url: $0.url)}
-//    }
-//}
 
 extension ToDoListViewModel: ToDoDataModelProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {

@@ -6,13 +6,13 @@
 //
 
 import Foundation
-protocol AddToDoViewModelProtocol: AnyObject {
-    func didCellFetchToDo(_ toDo: [NewListToDoArray])
-}
+//protocol AddToDoViewModelProtocol: AnyObject {
+//    func didCellFetchToDo(_ toDo: [NewListToDoArray])
+//}
 
 final class AddToDoViewModel {
     
-    weak var addToDoViewModelDelegate: AddToDoViewModelProtocol?
+ //   weak var addToDoViewModelDelegate: AddToDoViewModelProtocol?
     
     private var addToDoModelInstance = AddToDoModel()
     

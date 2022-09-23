@@ -8,6 +8,8 @@
 import Foundation
 
 struct NewListToDoArray {
+    var id: UUID?
+    var date: Date?
     var title: String?
     var description: String?
     var isCompleted: Bool
