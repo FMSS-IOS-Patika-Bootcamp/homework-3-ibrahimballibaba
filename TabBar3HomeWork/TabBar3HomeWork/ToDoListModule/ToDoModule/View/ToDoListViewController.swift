@@ -11,14 +11,11 @@ import CoreData
 
 class ToDoListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    private var newListArray = [NewListToDoArray]()
+    private var newListArray = [ToDoListModuleEntity]()
     private var toDoListViewModelInstance = ToDoListViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      //  setupUI()
-      //  toDoListViewModelInstance.toDoListViewModelDelegate = self
-      //  toDoListViewModelInstance.didViewLoad()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -46,10 +43,8 @@ private extension ToDoListViewController {
 
 extension ToDoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        toDoListViewModelInstance.didClickToDo(indexPath.row)
         let detailsToDoVC = storyboard?.instantiateViewController(withIdentifier: "detailsToDoVC") as! DetailsToDoViewController
         detailsToDoVC.toDoArray = newListArray[indexPath.row]
-        detailsToDoVC.index = indexPath.row
         navigationController?.pushViewController(detailsToDoVC, animated: true)
     }
 }
@@ -66,21 +61,34 @@ extension ToDoListViewController: UITableViewDataSource {
         if newListArray[indexPath.row].isCompleted{
             cell.titleLabel.text = newListArray[indexPath.row].title
             cell.switchImage.image = UIImage(systemName: "checkmark.seal.fill")
-            print("\(newListArray[indexPath.row].isCompleted)")
             return cell
         }else{
             cell.titleLabel.text = newListArray[indexPath.row].title
             cell.switchImage.image = UIImage(systemName: "checkmark.seal")
             return cell
         }
-        //print("\(newListArray[indexPath.row])")
     }
     
     
 }
 
+extension ToDoListViewController {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
+            self.toDoListViewModelInstance.didSwipe(indexPath.row)
+            // Remove data
+            self.newListArray.remove(at: indexPath.row)
+            // reload to tableView
+            tableView.reloadData()
+            complete(true)
+        }
+        let swipe = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipe
+    }
+}
+
 extension ToDoListViewController: ToDoListViewModelProtocol {
-    func didCellFetchToDo(_ toDo: [NewListToDoArray]) {
+    func didCellFetchToDo(_ toDo: [ToDoListModuleEntity]) {
         self.newListArray = toDo
         DispatchQueue.main.async {
             self.tableView.reloadData()

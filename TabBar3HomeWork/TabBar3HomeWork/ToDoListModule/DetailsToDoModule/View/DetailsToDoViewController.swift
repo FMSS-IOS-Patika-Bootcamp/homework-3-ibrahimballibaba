@@ -12,31 +12,27 @@ class DetailsToDoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var didDescreptionText: UITextView!
     
-    var toDoArray: NewListToDoArray?
-    var index: Int?
+    var toDoArray: ToDoListModuleEntity?
     
-    //private var detailsToDoViewModelInstance = DetailsToDoViewModel()
     private var detailsToDoViewModelInstance = DetailsToDoViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-
-        // Do any additional setup after loading the view.
     
     }
     
     func setupUI(){
         if let toDoArray = toDoArray {
             titleLabel.text = toDoArray.title
-            didDescreptionText.text = toDoArray.description
+            didDescreptionText.text = toDoArray.titleDescription
         }
     }
     
     
     @IBAction func didCompletedTapped(_ sender: UIButton) {
-        detailsToDoViewModelInstance.didUpdateDataImage(index: index!)
+        detailsToDoViewModelInstance.didUpdateDateTry(toDo: toDoArray!)
         navigationController?.popViewController(animated: true)
     }
     

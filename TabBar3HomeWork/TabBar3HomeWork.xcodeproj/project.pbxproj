@@ -28,7 +28,6 @@
 		1E9154E628DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154E428DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataClass.swift */; };
 		1E9154E728DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154E528DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataProperties.swift */; };
 		1E9154E928DCAF0400CE9FCE /* ToDoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154E828DCAF0400CE9FCE /* ToDoDataModel.swift */; };
-		1E9154EB28DCAFB600CE9FCE /* ToDoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154EA28DCAFB600CE9FCE /* ToDoEntity.swift */; };
 		1E9154ED28DCBDD800CE9FCE /* AddToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154EC28DCBDD800CE9FCE /* AddToDoModel.swift */; };
 		1EB08F8A28DBC31500542971 /* LetterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB08F8928DBC31500542971 /* LetterListModel.swift */; };
 		1EB08F8C28DBC32700542971 /* LetterListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB08F8B28DBC32700542971 /* LetterListEntity.swift */; };
@@ -64,7 +63,6 @@
 		1E9154E428DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListModuleEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1E9154E528DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListModuleEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1E9154E828DCAF0400CE9FCE /* ToDoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataModel.swift; sourceTree = "<group>"; };
-		1E9154EA28DCAFB600CE9FCE /* ToDoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoEntity.swift; sourceTree = "<group>"; };
 		1E9154EC28DCBDD800CE9FCE /* AddToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoModel.swift; sourceTree = "<group>"; };
 		1EB08F8928DBC31500542971 /* LetterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListModel.swift; sourceTree = "<group>"; };
 		1EB08F8B28DBC32700542971 /* LetterListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListEntity.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				1E9154E528DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataProperties.swift */,
 				1E9154DE28DC821A00CE9FCE /* UserInfo.xcdatamodeld */,
 				1E9154E128DC829D00CE9FCE /* CoreDataStack.swift */,
-				1E9154EA28DCAFB600CE9FCE /* ToDoEntity.swift */,
 			);
 			path = CoreDataModel;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 				1E36A64128DD2A570080145D /* DetailsToDoModel.swift in Sources */,
 				1E9154E028DC821A00CE9FCE /* UserInfo.xcdatamodeld in Sources */,
 				1E9154BF28DC552900CE9FCE /* GalleryListModel.swift in Sources */,
-				1E9154EB28DCAFB600CE9FCE /* ToDoEntity.swift in Sources */,
 				1EB08F8C28DBC32700542971 /* LetterListEntity.swift in Sources */,
 				1E9154C828DC696D00CE9FCE /* ToDoListViewController.swift in Sources */,
 			);
