@@ -23,7 +23,7 @@ final class ToDoDataModel {
             let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
             let results = try context.fetch(fetchRequest)
             newToDoData = results.map{
-                NewListToDoArray(title: $0.title, description: $0.titleDescription, isCompleted: $0.isCompleted)
+                NewListToDoArray(id: $0.idTry, date: $0.date, title: $0.title, description: $0.titleDescription, isCompleted: $0.isCompleted)
             }
             toDoDataModelDelegate?.didDataFetchProcessFinish(true)
         }catch{

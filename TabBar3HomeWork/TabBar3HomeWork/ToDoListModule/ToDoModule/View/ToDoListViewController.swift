@@ -19,6 +19,7 @@ class ToDoListViewController: UIViewController {
       //  setupUI()
       //  toDoListViewModelInstance.toDoListViewModelDelegate = self
       //  toDoListViewModelInstance.didViewLoad()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         setupUI()
@@ -29,8 +30,6 @@ class ToDoListViewController: UIViewController {
         let addToDoVC = storyboard?.instantiateViewController(withIdentifier: "addToDoVC") as! AddToDoViewController
         navigationController?.pushViewController(addToDoVC, animated: true)
     }
-    
-   
     
 }
 
@@ -46,7 +45,13 @@ private extension ToDoListViewController {
 }
 
 extension ToDoListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        toDoListViewModelInstance.didClickToDo(indexPath.row)
+        let detailsToDoVC = storyboard?.instantiateViewController(withIdentifier: "detailsToDoVC") as! DetailsToDoViewController
+        detailsToDoVC.toDoArray = newListArray[indexPath.row]
+        detailsToDoVC.index = indexPath.row
+        navigationController?.pushViewController(detailsToDoVC, animated: true)
+    }
 }
 
 extension ToDoListViewController: UITableViewDataSource {
@@ -56,8 +61,19 @@ extension ToDoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListTableViewCell", for: indexPath) as! ToDoListTableViewCell
-        cell.dataUI(newListArray[indexPath.row])
-        return cell
+        
+        
+        if newListArray[indexPath.row].isCompleted{
+            cell.titleLabel.text = newListArray[indexPath.row].title
+            cell.switchImage.image = UIImage(systemName: "checkmark.seal.fill")
+            print("\(newListArray[indexPath.row].isCompleted)")
+            return cell
+        }else{
+            cell.titleLabel.text = newListArray[indexPath.row].title
+            cell.switchImage.image = UIImage(systemName: "checkmark.seal")
+            return cell
+        }
+        //print("\(newListArray[indexPath.row])")
     }
     
     
@@ -75,8 +91,8 @@ extension ToDoListViewController: ToDoListViewModelProtocol {
 }
 
 
-private extension ToDoListTableViewCell {
-    func dataUI(_ model: NewListToDoArray){
-        titleLabel.text = model.title
-    }
-}
+//private extension ToDoListTableViewCell {
+//    func dataUI(_ model: NewListToDoArray){
+//        titleLabel.text = model.title
+//    }
+//}

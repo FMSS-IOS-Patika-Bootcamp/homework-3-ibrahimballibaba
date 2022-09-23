@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+
+
+final class DetailsToDoViewModel {
+    
+    private var detailsToDoModelInstance = DetailsToDoModel()
+    
+    func didUpdateDataImage(index: Int){
+        detailsToDoModelInstance.updateToDoList(index)
+    }
+}
+
+

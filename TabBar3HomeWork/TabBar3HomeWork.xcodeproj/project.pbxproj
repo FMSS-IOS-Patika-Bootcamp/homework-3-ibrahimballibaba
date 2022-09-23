@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E36A64128DD2A570080145D /* DetailsToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36A64028DD2A570080145D /* DetailsToDoModel.swift */; };
 		1E9154B928DC54EF00CE9FCE /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154B828DC54EF00CE9FCE /* GalleryListViewController.swift */; };
 		1E9154BC28DC550D00CE9FCE /* GalleryListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9154BA28DC550D00CE9FCE /* GalleryListCollectionViewCell.swift */; };
 		1E9154BD28DC550D00CE9FCE /* GalleryListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9154BB28DC550D00CE9FCE /* GalleryListCollectionViewCell.xib */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E36A64028DD2A570080145D /* DetailsToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsToDoModel.swift; sourceTree = "<group>"; };
 		1E9154B828DC54EF00CE9FCE /* GalleryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListViewController.swift; sourceTree = "<group>"; };
 		1E9154BA28DC550D00CE9FCE /* GalleryListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E9154BB28DC550D00CE9FCE /* GalleryListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		1EB4996228DBA01100975C2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1E36A64028DD2A570080145D /* DetailsToDoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				1E9154E728DC9E5E00CE9FCE /* ToDoListModuleEntity+CoreDataProperties.swift in Sources */,
 				1EB08F8A28DBC31500542971 /* LetterListModel.swift in Sources */,
 				1E9154D228DC78C600CE9FCE /* ToDoListViewModel.swift in Sources */,
+				1E36A64128DD2A570080145D /* DetailsToDoModel.swift in Sources */,
 				1E9154E028DC821A00CE9FCE /* UserInfo.xcdatamodeld in Sources */,
 				1E9154BF28DC552900CE9FCE /* GalleryListModel.swift in Sources */,
 				1E9154EB28DCAFB600CE9FCE /* ToDoEntity.swift in Sources */,

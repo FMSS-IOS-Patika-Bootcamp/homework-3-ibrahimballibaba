@@ -21,19 +21,9 @@ class AddToDoViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: UIButton) {
-        guard let titleText = titleText.text else {return}
-        guard let descriptionText = descriptionText.text else {return}
+        guard let titleText = titleText.text, !titleText.isEmpty else {return}
+        guard let descriptionText = descriptionText.text, !descriptionText.isEmpty else {return}
         addToDoViewModelInstance.saveButtonTapped(titleText: titleText, descriptionText: descriptionText)
-     //   let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
-     //   let data = ToDoListModuleEntity(context: managedContext)
-     //   if let titleText = titleText.text{
-     //       data.setValue(titleText, forKey: #keyPath(ToDoListModuleEntity.title))
-     //   }
-     //   if let descriptionText = descriptionText.text{
-     //       data.setValue(descriptionText, forKey: #keyPath(ToDoListModuleEntity.titleDescription))
-     //   }
-     //
-     //   AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
         
         navigationController?.popViewController(animated: true)
         
