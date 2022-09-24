@@ -11,12 +11,17 @@ import CoreData
 class AddToDoViewController: UIViewController {
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var saveTapped: UIButton!
     
     private var addToDoViewModelInstance = AddToDoViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        saveTapped.layer.cornerRadius = 8
+        descriptionText.layer.cornerRadius = 8
+        titleText.layer.cornerRadius = 8
+        
     }
     
     @IBAction func saveTapped(_ sender: UIButton) {

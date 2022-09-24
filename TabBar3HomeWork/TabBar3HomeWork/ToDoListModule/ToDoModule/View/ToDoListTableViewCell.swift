@@ -14,16 +14,22 @@ class ToDoListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-        containerView.layer.cornerRadius = 16
+        containerView.layer.cornerRadius = 8
+        titleLabel.layer.masksToBounds = true
+        titleLabel.layer.cornerRadius = 8
+        switchImage.layer.cornerRadius = 8
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        //checkmark.seal.fill dursun
-        // Configure the view for the selected state
+extension ToDoListTableViewCell {
+    func dataUI(_ model: ToDoListModuleEntity){
+        titleLabel.text = model.title
+        if model.isCompleted{
+            switchImage.image = UIImage(systemName: "checkmark.seal.fill")
+        }else{
+            switchImage.image = UIImage(systemName: "checkmark.seal")
+        }
     }
-    
 }

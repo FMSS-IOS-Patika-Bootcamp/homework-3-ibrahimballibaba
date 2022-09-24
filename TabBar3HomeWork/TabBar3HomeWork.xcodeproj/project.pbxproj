@@ -50,7 +50,7 @@
 		1E9154BE28DC552900CE9FCE /* GalleryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListModel.swift; sourceTree = "<group>"; };
 		1E9154C028DC553700CE9FCE /* GalleryListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListEntity.swift; sourceTree = "<group>"; };
 		1E9154C228DC554400CE9FCE /* GalleryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListViewModel.swift; sourceTree = "<group>"; };
-		1E9154C728DC696D00CE9FCE /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		1E9154C728DC696D00CE9FCE /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		1E9154C928DC6D9A00CE9FCE /* DetailsToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsToDoViewController.swift; sourceTree = "<group>"; };
 		1E9154CB28DC6DAA00CE9FCE /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		1E9154CD28DC6FEB00CE9FCE /* ToDoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewCell.swift; sourceTree = "<group>"; };

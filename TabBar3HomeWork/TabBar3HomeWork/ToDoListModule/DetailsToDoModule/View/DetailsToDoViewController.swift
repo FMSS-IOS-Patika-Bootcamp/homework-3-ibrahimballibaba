@@ -11,6 +11,7 @@ import SwiftUI
 class DetailsToDoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var didDescreptionText: UITextView!
+    @IBOutlet weak var clickedCompleted: UIButton!
     
     var toDoArray: ToDoListModuleEntity?
     
@@ -20,6 +21,10 @@ class DetailsToDoViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        titleLabel.layer.masksToBounds = true
+        titleLabel.layer.cornerRadius = 8
+        clickedCompleted.layer.cornerRadius = 8
+        didDescreptionText.layer.cornerRadius = 8
     
     }
     
@@ -32,7 +37,7 @@ class DetailsToDoViewController: UIViewController {
     
     
     @IBAction func didCompletedTapped(_ sender: UIButton) {
-        detailsToDoViewModelInstance.didUpdateDateTry(toDo: toDoArray!)
+        detailsToDoViewModelInstance.didUpdateDataTry(toDo: toDoArray!)
         navigationController?.popViewController(animated: true)
     }
     
