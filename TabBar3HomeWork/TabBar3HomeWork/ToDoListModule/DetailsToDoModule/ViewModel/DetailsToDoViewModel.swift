@@ -13,7 +13,7 @@ final class DetailsToDoViewModel {
     
     private var detailsToDoModelInstance = DetailsToDoModel()
     
-    func didUpdateDateTry(toDo: ToDoListModuleEntity){
+    func didUpdateDataTry(toDo: ToDoListModuleEntity){
         detailsToDoModelInstance.tryWithEntity(toDo)
     }
 }

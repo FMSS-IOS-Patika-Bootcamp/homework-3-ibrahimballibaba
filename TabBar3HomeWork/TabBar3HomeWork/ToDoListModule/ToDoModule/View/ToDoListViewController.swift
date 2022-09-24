@@ -10,19 +10,26 @@ import CoreData
 
 
 class ToDoListViewController: UIViewController {
+    
+    //MARK: - UI Elements
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Properties
     private var newListArray = [ToDoListModuleEntity]()
     private var toDoListViewModelInstance = ToDoListViewModel()
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     override func viewWillAppear(_ animated: Bool) {
         setupUI()
         toDoListViewModelInstance.toDoListViewModelDelegate = self
         toDoListViewModelInstance.didViewLoad()
     }
+    
+    //MARK: - Functions
     @IBAction func goToAddToDoVC(_ sender: UIBarButtonItem) {
         let addToDoVC = storyboard?.instantiateViewController(withIdentifier: "addToDoVC") as! AddToDoViewController
         navigationController?.pushViewController(addToDoVC, animated: true)
@@ -30,6 +37,7 @@ class ToDoListViewController: UIViewController {
     
 }
 
+//MARK: - Extensions
 private extension ToDoListViewController {
     func setupUI(){
         tableView.delegate = self
@@ -57,25 +65,17 @@ extension ToDoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListTableViewCell", for: indexPath) as! ToDoListTableViewCell
         
-        
-        if newListArray[indexPath.row].isCompleted{
-            cell.titleLabel.text = newListArray[indexPath.row].title
-            cell.switchImage.image = UIImage(systemName: "checkmark.seal.fill")
-            return cell
-        }else{
-            cell.titleLabel.text = newListArray[indexPath.row].title
-            cell.switchImage.image = UIImage(systemName: "checkmark.seal")
-            return cell
-        }
+        let selectedItem = newListArray[indexPath.row]
+        cell.dataUI(selectedItem)
+        return cell
+
     }
-    
-    
 }
 
 extension ToDoListViewController {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
-            self.toDoListViewModelInstance.didSwipe(indexPath.row)
+            self.toDoListViewModelInstance.didSwipe(indexPath.row) //get data from the viewModel and Model
             // Remove data
             self.newListArray.remove(at: indexPath.row)
             // reload to tableView
@@ -87,6 +87,12 @@ extension ToDoListViewController {
     }
 }
 
+extension ToDoListViewController {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60.0)
+    }
+}
+
 extension ToDoListViewController: ToDoListViewModelProtocol {
     func didCellFetchToDo(_ toDo: [ToDoListModuleEntity]) {
         self.newListArray = toDo
@@ -94,13 +100,4 @@ extension ToDoListViewController: ToDoListViewModelProtocol {
             self.tableView.reloadData()
         }
     }
-    
-    
 }
-
-
-//private extension ToDoListTableViewCell {
-//    func dataUI(_ model: NewListToDoArray){
-//        titleLabel.text = model.title
-//    }
-//}

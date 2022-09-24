@@ -31,7 +31,7 @@ final class ToDoDataModel {
     }
     
     func deleteSwipe(_ index: Int){
-        // Remove the note from the CoreData
+        // Remove the newToDoData[index] from the CoreData
         AppDelegate.sharedAppDelegate.coreDataStack.managedContext.delete(self.newToDoData[index])
         // Save Changes
         AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
