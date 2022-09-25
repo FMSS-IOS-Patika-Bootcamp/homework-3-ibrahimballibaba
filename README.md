@@ -1,17 +1,26 @@
 # HomWork-3
-3. Ödevimiz
 
+     TabBar App
 
-- Tab bar Controller olcak. En az 3 tane Tab olucak. 
-- İlk Tab'de TableView olucak ve bu TableView içerisinde https://jsonplaceholder.typicode.com/ linkindeki post'lar api kullanarak cekilip gösterilicek. ( SADECE URLSESSİON KULLANILICAKTIR.)
-- İkinci Tab'de CollectionView kullanılıcaktır.  https://jsonplaceholder.typicode.com/ linkindeki /photos'lar api kullanarak cekilip gösterilicek.
-- İmageler sadece KingsFisher kütüphanesi kullanılıar gösterilicektir. Başka kütüphane kabul edilmicektir. 
-- Cell yapısı kullanılar collectionView da gösterilicektir.
-- Grit yapısı oluşturularak CollectionView lar gösterilicektir. Aralarında boşluk birakilarak yapılırsa artı puan verilicek
-- Üçüncü tab'de Todo list gösterilicektir. Burdaki listeler CoreData dan alınıcaktır. Bu tab'de bir tane ekle butonu olucaktır.
-- Ekle butonuna basınca Yeni bir sayfaya geçiş yapılıcak ve bu sayfa Todo kaydedilicektir. Kayıt yapıldıktan sonra Todo list ekranına dönüş yapılmalıdır.
-- Yeni eklenen Todo Listenin en başında Gözükmelidir.
-- Todo'ların üstüne tıklanınca Detay sayfasına gidilicek, Bu sayfada Tamamlandı butonu olucak ve bu Butona tıklandığında Todo List sayfasına geri dönüş yapılıcaktır.
-- Tamamlandı butonuna basıldığı zaman, Todo List ekranında ilgili Todo Cellindeki image tick şaretine dönüşücektir.
+#### App Description
+- The App has three ViewController in tabbar
+- First VC is LetterListViewController, used tableView here. This VC pulls data from API with URLSession and lists it. from here "https://jsonplaceholder.typicode.com/posts"
+- Second VC is GalleryListViewController, used CollectionView here, This VC pulls from API with URLSession like LetterListVC but there are different data, pulls photos "https://jsonplaceholder.typicode.com/photos"
+- Kingfisher library was used to capture images
+- Third VC is ToDoListViewController, used tableView here. The goal of this VC; go to addToDoList when clicked addbutton and entiry new data and save it go back toDoVC. Later if you click a index go to detailVC and shows data, finally if you click "completed" button in detailVC, go back toDoVC and fill the checkImage
+- Get all toDoList from CoreData
+- If you have problems about Kingfisher after download zip, you should do fetch or again add Kingfher in Xcode (Kingfisher installed in app with SPM)
 
- Arkadaşlar kolay gelsin :)
+#### Tools I use
+- UIKit
+- TableView
+- CollectionView
+- Auto Layout
+
+#### Third Party Library
+- KingFisher
+
+#### Design Pattern Architecture
+- MVVM
+
+#### Photos
