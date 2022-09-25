@@ -13,6 +13,8 @@
 
 #### Tools I use
 - UIKit
+- NavigationController
+- TabBarController
 - TableView
 - CollectionView
 - Auto Layout
