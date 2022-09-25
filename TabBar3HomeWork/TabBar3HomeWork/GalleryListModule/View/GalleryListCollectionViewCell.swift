@@ -13,7 +13,6 @@ class GalleryListCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         containerView.layer.cornerRadius = 8
         imageView.layer.cornerRadius = 8

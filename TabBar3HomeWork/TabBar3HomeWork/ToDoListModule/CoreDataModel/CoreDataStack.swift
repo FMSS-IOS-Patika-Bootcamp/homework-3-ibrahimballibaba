@@ -13,10 +13,10 @@ class CoreDataStack {
     private let modelName: String
     
     init(modelName: String){
-        self.modelName = modelName // soldaki userInfo bir model name
+        self.modelName = modelName // userInfo is a modelName
     }
     
-    //burada oluşturduğumuz storeContainer üzerinden manageObjectContext e erişiyoruz oradan da UserInfo içerisindeki entityde bulunan verilere erişiyoruz
+    //create a storeContainer and access to CoreData
     private lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { _, error in
@@ -30,6 +30,7 @@ class CoreDataStack {
     //NSManageObjectContext is mean Mock
     lazy var managedContext: NSManagedObjectContext = self.storeContainer.viewContext
     
+    //save data to CoreData
     func saveContext(){
         guard managedContext.hasChanges else{
             return

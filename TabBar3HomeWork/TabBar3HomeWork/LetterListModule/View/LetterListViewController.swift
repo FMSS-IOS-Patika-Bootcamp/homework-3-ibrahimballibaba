@@ -10,13 +10,13 @@ import UIKit
 class LetterListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    //Instance
     private let letterListViewModel = LetterListViewModel()
     
     var newLatter = [letterModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         setupUI()
         letterListViewModel.viewDelegate = self
@@ -32,6 +32,8 @@ private extension LetterListViewController {
         tableView.dataSource = self
         registerCell()
     }
+    
+    //Register LetterListTableViewCell to LetterListViewController
     func registerCell(){
         tableView.register(.init(nibName: "LetterListTableViewCell", bundle: nil), forCellReuseIdentifier: "LetterListTableViewCell")
     }
@@ -66,7 +68,7 @@ extension LetterListViewController: LetterListViewModelProtocol {
     }
 }
 
-
+//to display the incoming data on the screen.
 private extension LetterListTableViewCell {
     func setupUI(_ letter: letterModel){
         self.titleLabel.text = letter.title

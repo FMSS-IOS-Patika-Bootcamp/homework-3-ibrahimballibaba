@@ -7,11 +7,13 @@
 
 import Foundation
 
+//This area our entity
 struct letterModel {
     var title: String?
     var body: String?
 }
 
+//API data
 struct Letter: Decodable {
     var id: Int
     var userId: Int

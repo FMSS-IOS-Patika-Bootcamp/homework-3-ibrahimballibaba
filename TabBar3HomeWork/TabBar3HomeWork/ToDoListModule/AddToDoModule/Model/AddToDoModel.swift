@@ -12,6 +12,7 @@ import CoreData
 final class AddToDoModel {
     
     
+    //save data to coreData
     func fetchData(titleText: String, descriptionText: String){
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         let data = ToDoListModuleEntity(context: managedContext)

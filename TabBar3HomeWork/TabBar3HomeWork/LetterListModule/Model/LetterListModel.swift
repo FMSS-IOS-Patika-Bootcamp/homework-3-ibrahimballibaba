@@ -18,13 +18,17 @@ final class LetterListModel {
     
     func fetchData(){
         
+        //Access to URL
         guard let url = URL.init(string: "https://jsonplaceholder.typicode.com/posts") else{
             delegate?.didDataFetchProcessFinish(false)
             return
         }
+        
         var request: URLRequest = .init(url: url)
         request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in //weak self memory leak durumunu önlemek için tanımlanır. tüm closure lara yaz
+        
+        //Weak self define prevent for memory leak
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             
             guard let self = self else{return} // escape from the optinal
             
@@ -45,7 +49,7 @@ final class LetterListModel {
             }
             do {
                 let jsonDecoder = JSONDecoder()
-                self.letters = try jsonDecoder.decode([Letter].self, from: data) //from daki datayı, [Post] arrayı type ına çevirme işlemini burada yapıyoruz.
+                self.letters = try jsonDecoder.decode([Letter].self, from: data) //get from data and send to letters
                 self.delegate?.didDataFetchProcessFinish(true)
                 
             } catch {
@@ -53,6 +57,6 @@ final class LetterListModel {
                 print("erorrrrrr")
             }
         }
-        task.resume()
+        task.resume() //run
     }
 }

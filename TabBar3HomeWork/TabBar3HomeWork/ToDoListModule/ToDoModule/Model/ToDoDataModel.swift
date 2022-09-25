@@ -14,7 +14,9 @@ protocol ToDoDataModelProtocol: AnyObject {
 final class ToDoDataModel {
     weak var toDoDataModelDelegate: ToDoDataModelProtocol?
     
-    var newToDoData = [ToDoListModuleEntity]()
+    var newToDoData = [ToDoListModuleEntity]() // ToDoListModuleEntity is from CoreData
+    
+    //The function for to show the added data on the screen
     func getData() {
         let fetchRequest: NSFetchRequest<ToDoListModuleEntity> = ToDoListModuleEntity.fetchRequest()
         let sortByDate = NSSortDescriptor(key: #keyPath(ToDoListModuleEntity.date), ascending: false)
@@ -30,6 +32,7 @@ final class ToDoDataModel {
         }
     }
     
+    //Swipe
     func deleteSwipe(_ index: Int){
         // Remove the newToDoData[index] from the CoreData
         AppDelegate.sharedAppDelegate.coreDataStack.managedContext.delete(self.newToDoData[index])
