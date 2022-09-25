@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol ToDoListViewModelProtocol: AnyObject {
     func didCellFetchToDo(_ toDo: [ToDoListModuleEntity])
@@ -31,7 +30,7 @@ final class ToDoListViewModel {
     }
 }
 
-
+//if data is successful, set to the protocol
 extension ToDoListViewModel: ToDoDataModelProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess{

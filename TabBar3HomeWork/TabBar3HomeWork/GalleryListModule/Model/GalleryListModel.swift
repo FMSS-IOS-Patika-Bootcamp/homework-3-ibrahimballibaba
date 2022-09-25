@@ -19,6 +19,7 @@ final class GalleryListModel {
     
             func fetcData(){
                 
+                //Access to URL
                 guard let url = URL.init(string: "https://jsonplaceholder.typicode.com/photos") else {
                     delegate?.didDataFetchProcessFinish(false)
                     return
@@ -27,9 +28,11 @@ final class GalleryListModel {
                 var urlRequest: URLRequest = .init(url: url)
                 urlRequest.httpMethod = "GET"
                 
+                //Weak self define prevent for memory leak
                 let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
                     
-                    guard let self = self else{return}
+                    
+                    guard let self = self else{return} // escape from the optinal
                     
                     guard error == nil else{
                         self.delegate?.didDataFetchProcessFinish(false)
@@ -51,7 +54,7 @@ final class GalleryListModel {
                     
                     do{
                        // let jsonDecoder = JSONDecoder()
-                        self.photosAPI = try JSONDecoder().decode([Photos].self, from: data)
+                        self.photosAPI = try JSONDecoder().decode([Photos].self, from: data) //get from data and send to Photos
                         self.delegate?.didDataFetchProcessFinish(true)
                     } catch {
                         self.delegate?.didDataFetchProcessFinish(false)
@@ -59,6 +62,6 @@ final class GalleryListModel {
                     }
                 }
                 
-                task.resume()
+                task.resume() //run
             }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 
 class ToDoListViewController: UIViewController {
@@ -52,7 +51,7 @@ private extension ToDoListViewController {
 extension ToDoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailsToDoVC = storyboard?.instantiateViewController(withIdentifier: "detailsToDoVC") as! DetailsToDoViewController
-        detailsToDoVC.toDoArray = newListArray[indexPath.row]
+        detailsToDoVC.toDoArray = newListArray[indexPath.row] //pass to data DetailsVC from here
         navigationController?.pushViewController(detailsToDoVC, animated: true)
     }
 }
@@ -64,7 +63,6 @@ extension ToDoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListTableViewCell", for: indexPath) as! ToDoListTableViewCell
-        
         let selectedItem = newListArray[indexPath.row]
         cell.dataUI(selectedItem)
         return cell
@@ -87,6 +85,7 @@ extension ToDoListViewController {
     }
 }
 
+//Row Height
 extension ToDoListViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(60.0)

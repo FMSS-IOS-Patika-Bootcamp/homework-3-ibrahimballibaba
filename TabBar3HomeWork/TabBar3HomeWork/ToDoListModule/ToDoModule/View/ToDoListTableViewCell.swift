@@ -22,7 +22,7 @@ class ToDoListTableViewCell: UITableViewCell {
     }
 }
 
-
+//to display the incoming data on the screen.
 extension ToDoListTableViewCell {
     func dataUI(_ model: ToDoListModuleEntity){
         titleLabel.text = model.title

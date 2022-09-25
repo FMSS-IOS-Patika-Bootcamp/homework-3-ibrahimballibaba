@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class DetailsToDoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -37,7 +36,7 @@ class DetailsToDoViewController: UIViewController {
     
     
     @IBAction func didCompletedTapped(_ sender: UIButton) {
-        detailsToDoViewModelInstance.didUpdateDataTry(toDo: toDoArray!)
+        detailsToDoViewModelInstance.didUpdateDataTry(toDo: toDoArray!) //if we click didCompletedTapped work this func
         navigationController?.popViewController(animated: true)
     }
     

@@ -11,6 +11,7 @@ final class AddToDoViewModel {
     
     private var addToDoModelInstance = AddToDoModel()
     
+    //the function access to AddToDoModel
     func saveButtonTapped(titleText: String, descriptionText: String){
         addToDoModelInstance.fetchData(titleText: titleText, descriptionText: descriptionText)
     }

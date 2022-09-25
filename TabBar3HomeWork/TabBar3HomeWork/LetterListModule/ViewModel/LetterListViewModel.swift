@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Protocol for pass to LetterVC
 protocol LetterListViewModelProtocol: AnyObject {
     func didCellItemFetch(_ letters: [letterModel])
 }
@@ -22,7 +23,7 @@ final class LetterListViewModel {
     }
     
     func didViewLoad(){
-        letterListModel.fetchData()
+        letterListModel.fetchData() //raw data
     }
 }
 
@@ -34,6 +35,7 @@ private extension LetterListViewModel {
     }
 }
 
+//if data is successful pass it to letterModel Entity
 extension LetterListViewModel: LetterListModelProtocol {
     func didDataFetchProcessFinish(_ isSuccess: Bool) {
         if isSuccess{

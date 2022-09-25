@@ -11,6 +11,7 @@ import Kingfisher
 class GalleryListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //Instance
     private let GalleryListViewModelInstance = GalleryListViewModel()
     private var photos = [PhotosModel]()
     
@@ -31,6 +32,8 @@ private extension GalleryListViewController {
         collectionView.dataSource = self
         registerCell()
     }
+    
+    //Register for collectionViewCell to this VC
     func registerCell(){
         collectionView.register(.init(nibName: "GalleryListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryListCollectionViewCell")
     }
@@ -52,7 +55,7 @@ extension GalleryListViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryListCollectionViewCell", for: indexPath) as! GalleryListCollectionViewCell
         if let url = photos[indexPath.row].url {
             let thisUrl = URL(string: url)
-            cell.imageView.kf.setImage(with: thisUrl)
+            cell.imageView.kf.setImage(with: thisUrl) //KingFisher for url convert to image
         }
         return cell
     }
