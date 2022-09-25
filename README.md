@@ -20,7 +20,7 @@
 #### Third Party Library
 - KingFisher
 
-#### Design Pattern Architecture
+#### Software Architectural Pattern
 - MVVM
 
 #### Photos
