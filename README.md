@@ -9,7 +9,7 @@
 - Kingfisher library was used to capture images
 - Third VC is ToDoListViewController, used tableView here. The goal of this VC; go to addToDoList when clicked addbutton and entiry new data and save it go back toDoVC. Later if you click a index go to detailVC and shows data, finally if you click "completed" button in detailVC, go back toDoVC and fill the checkImage
 - Get all toDoList from CoreData
-- If you have problems about Kingfisher after download zip, you should do fetch or again add Kingfher in Xcode (Kingfisher installed in app with SPM)
+- If you have problems about Kingfisher after download zip, you should do fetch or again add Kingfisher in Xcode (Kingfisher installed in app with SPM)
 
 #### Tools I use
 - UIKit
