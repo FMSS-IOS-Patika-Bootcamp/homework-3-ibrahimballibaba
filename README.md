@@ -16,6 +16,8 @@
 - TableView
 - CollectionView
 - Auto Layout
+- CoreData
+- API (https://jsonplaceholder.typicode.com)
 
 #### Third Party Library
 - KingFisher
